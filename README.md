@@ -17,9 +17,9 @@ The app architecture, project and code organization, file structure and comments
 1. Selecting one item in the list should present a map view with all result items annotated. The selected item annotation should be centered, as in PICTURE 2.1. Feel free to set the zoom level.
 1. Selecting an item annotation in the map view should present its location name and coordinates (PICTURE 2.1).
 1. In the Map screen, add a "Save" button to the navigation bar, allowing the user to save the selected result object. This action should save the current object to a Core Data store and the object should be unique in the store.
-  * **This is not applicable to the "Display All on Map" option**.
+    * **This is not applicable to the "Display All on Map" option**.
 1. Case the object has been previously saved, the "Save" button should become into a "Delete" button. Tapping this button will delete the current object from Core Data, after popping up an alert view confirming the deletion. User should be able to "Cancel" or "Delete" the item from the presented alert view.
-  * **This is not applicable to the "Display All on Map" option**.
+    * **This is not applicable to the "Display All on Map" option**.
 1. Provide unit tests for models and view controllers, using the XCTest framework.
 
 ### Sample Screenshots
@@ -43,10 +43,10 @@ Screenshot | Description
 * This assessment must be delivered within 2 days.
 * You can use whatever third party library you want to accomplish these requirements.
 * You must provide a COMMENTS.txt (plain text) or a COMMENTS.md (Markdown) file at the root of your repository, explaining:
-  * Main architecture decisions you've made and a quick explanation of why.
-  * List of third party libraries and why you chose each one.
-  * What could be improved if you had more time.
-  * Mention anything that was asked but not delivered and why, and any additional comments.
+    * Main architecture decisions you've made and a quick explanation of why.
+    * List of third party libraries and why you chose each one.
+    * What could be improved if you had more time.
+    * Mention anything that was asked but not delivered and why, and any additional comments.
 * Any questions, please send an email to **recruitment.engineering@avenuecode.com**
 
 ### Delivery Instructions
