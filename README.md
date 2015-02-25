@@ -43,10 +43,10 @@ Screenshot | Description
 * This assessment must be delivered within 2 days.
 * You can use whatever third party library you want to accomplish these requirements.
 * You must provide a COMMENTS.txt (plain text) or a COMMENTS.md (Markdown) file at the root of your repository, explaining:
-* Main architecture decisions you've made and a quick explanation of why.
-* List of third party libraries and why you chose each one.
-* What could be improved if you had more time.
-* Mention anything that was asked but not delivered and why, and any additional comments.
+  * Main architecture decisions you've made and a quick explanation of why.
+  * List of third party libraries and why you chose each one.
+  * What could be improved if you had more time.
+  * Mention anything that was asked but not delivered and why, and any additional comments.
 * Any questions, please send an email to **recruitment.engineering@avenuecode.com**
 
 ### Delivery Instructions
