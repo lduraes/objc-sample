@@ -11,26 +11,15 @@
 
 @implementation AVCObjectMapping
 
-//+(RKObjectMapping *)gMapItemMapping {
-//    RKObjectMapping *gMapItemMapping = [RKObjectMapping mappingForClass:[AVCGMapItem class]];
-//    [gMapItemMapping addAttributeMappingsFromDictionary:@{ @"address_components": @"addressComponents"
-//                                                          ,@"formatted_address": @"formattedAddress"
-//                                                          ,@"place_id": @"placeId"}];
-//
-//    [gMapItemMapping addAttributeMappingsFromArray:@[ @"geometry"
-//                                                     ,@"types"]];
-//    
-//    return gMapItemMapping;
-//
-//}
+#pragma mark - Public
 
 +(RKObjectMapping *)gMapItemMapping {
     RKObjectMapping *gMapItemMapping = [RKObjectMapping mappingForClass:[AVCGMapItem class]];
-    [gMapItemMapping addAttributeMappingsFromArray:@[ @"results"
-                                                     ,@"status"]];
+    [gMapItemMapping addAttributeMappingsFromArray:@[@"status"]];
+    [gMapItemMapping addAttributeMappingsFromDictionary:@{@"formatted_address": @"address"}];
+    [gMapItemMapping addAttributeMappingsFromDictionary:@{@"geometry.location": @"dictLocation"}];
     
     return gMapItemMapping;
-    
 }
 
 @end

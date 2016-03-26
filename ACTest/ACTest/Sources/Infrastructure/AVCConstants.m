@@ -20,6 +20,6 @@ NSUInteger const kErrCodeServiceUnavailable = 2;
 NSUInteger const kErrCodeNoRecordFound = 3;
 NSUInteger const kErrCodeServerTimedOut = 4;
 
-NSTimeInterval const kRequestResponseTimeout = 10;
+NSTimeInterval const kRequestResponseTimeout = 100;
 
 @end

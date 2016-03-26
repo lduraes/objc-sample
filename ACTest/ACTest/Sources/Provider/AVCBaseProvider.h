@@ -9,6 +9,7 @@
 #import <RestKit/RestKit.h>
 #import "AVCRKObjectManagerProvider.h"
 #import "AVCConstants.h"
+#import "AVCRequest.h"
 
 typedef void(^MappingResultBlock)(RKMappingResult *mappingResult, NSError *error);
 

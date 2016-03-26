@@ -7,17 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface AVCGMapItem : NSObject
 
 @property (strong, nonatomic) NSString *address;
-@property (strong, nonatomic) NSDictionary *results;
-@property (strong, nonatomic) NSString *status;
-//@property (strong, nonatomic) NSString *addressComponents;
-//@property (strong, nonatomic) NSString *formattedAddress;
-//@property (strong, nonatomic) NSString *geometry;
-//@property (strong, nonatomic) NSString *placeId;
-//@property (strong, nonatomic) NSString *types;
+@property (strong, nonatomic) NSDictionary *dictLocation;
+@property (strong, nonatomic) CLLocation *coordinates;
 
 -(instancetype)initWithAddress:(NSString *)address;
 

@@ -4,7 +4,7 @@
 ##Architecture 
 I do not like using Apple's MVC architecture because I reckon that UIViewControllers get massive. As a result, I would rather using some patterns instead. 
 
-Most of friends who also work with mobile know the architecture that I applied in this challenge. I do not really know its name, I think that is pretty similar to VIPER (*), however I have already read somo articles which showed me a different approach (at manager layer).
+Most of friends who also work with mobile know the architecture that I applied in this challenge. I do not really know its name, I think that is pretty similar to VIPER (*), however I have already read some articles which showed me a different approach (at manager layer).
 
 (*) https://medium.com/brigade-engineering/brigades-experience-using-an-mvc-alternative-36ef1601a41f#.a2ixazu3a
 

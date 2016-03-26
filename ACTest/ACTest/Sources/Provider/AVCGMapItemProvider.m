@@ -9,17 +9,19 @@
 #import "AVCGMapItemProvider.h"
 #import "AVCObjectMapping.h"
 
+static NSString *const kRestProviderSearchItemKeyPath = @"results";
+
 @implementation AVCGMapItemProvider
 
 -(void)searchAddress:(NSString *)address withCompletionHandler:(AVCGMapItemBlock)handler {
-    AVCGMapItem *request = [[AVCGMapItem alloc] initWithAddress:address];
+    AVCRequest *request = [[AVCRequest alloc] initWithAddress:address];
     
     [self getObjectsAtPath:RKPathFromPatternWithObject(kRestProviderSearchItem, request) withParameters:nil withCompletionHandler:^(RKMappingResult *mappingResult, NSError *error) {
         if(error) {
             handler(nil, error.code == kErrCodeServiceUnavailable ? [NSError errorWithDomain:kErrorDomain code:kErrCodeServiceUnavailable userInfo:@{NSLocalizedDescriptionKey:NSLocalizedString(@"errMsgAuthentication", nil)}] : error);
         }
         else {
-            handler(mappingResult.firstObject, error);
+            handler(mappingResult.array, error);
         }
     }];
 }
@@ -32,7 +34,7 @@
     RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:[AVCObjectMapping gMapItemMapping]
                                                                                             method:RKRequestMethodGET
                                                                                        pathPattern:nil
-                                                                                           keyPath:nil
+                                                                                           keyPath:kRestProviderSearchItemKeyPath
                                                                                        statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
     [self.objectManager addResponseDescriptor:responseDescriptor];
 }

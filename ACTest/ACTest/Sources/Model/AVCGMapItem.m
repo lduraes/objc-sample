@@ -20,4 +20,12 @@
     return self;
 }
 
+#pragma mark - Private
+
+-(void)setDictLocation:(NSDictionary *)dictLocation {
+    _dictLocation = dictLocation;
+    CLLocation *cllocation = [[CLLocation alloc] initWithLatitude:[self.dictLocation[@"lat"] floatValue] longitude:[self.dictLocation[@"lng"] floatValue]];
+    [self setCoordinates:cllocation];
+}
+
 @end

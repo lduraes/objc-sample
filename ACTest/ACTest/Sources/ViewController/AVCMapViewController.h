@@ -10,4 +10,6 @@
 
 @interface AVCMapViewController : UIViewController
 
+@property (strong, nonatomic) NSArray *arrayItems;
+
 @end

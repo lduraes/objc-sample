@@ -10,15 +10,29 @@
 
 @implementation AVCGMapItem (AVCBusiness)
 
+#pragma mark - Public
+
 +(void)searchAddress:(NSString *)address withCompletionHandler:(AVCGMapItemBlock)handler {
-    [AVCGMapItemProvider.new searchAddress:address withCompletionHandler:^(AVCGMapItem *item, NSError *error) {
+    __weak typeof(self) weakSelf = self;
+    
+    [AVCGMapItemProvider.new searchAddress:address withCompletionHandler:^(NSArray *arrayItems, NSError *error) {
         if(error) {
             handler(nil, [NSError errorWithDomain:kErrorDomain code:kErrCodeServiceUnavailable userInfo:[NSDictionary dictionaryWithObject:NSLocalizedString(@"errMsgUserOrPassword", nil) forKey:NSLocalizedDescriptionKey]]);
         }
         else {
-            handler(item, nil);
+            handler([weakSelf prepareArrayWithItems:arrayItems], nil);
         }
     }];
+}
+
+#pragma mark - Private
+
++(NSArray *)prepareArrayWithItems:(NSArray *)arrayItems {
+    if(arrayItems.count > 1) {
+        return @[[[AVCGMapItem alloc] initWithAddress:@"Display All on Map"], arrayItems];
+    }
+    
+    return arrayItems;
 }
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F7637551CA64CA400457D3F /* UIView+AVCExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7637541CA64CA400457D3F /* UIView+AVCExtensions.m */; };
 		3F8B19E51C94C1F800209049 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F8B19D21C94C1F800209049 /* Assets.xcassets */; };
 		3F8B19E61C94C1F800209049 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F8B19D31C94C1F800209049 /* LaunchScreen.storyboard */; };
 		3F8B19E71C94C1F800209049 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F8B19D51C94C1F800209049 /* Main.storyboard */; };
@@ -14,8 +15,8 @@
 		3F8B19E91C94C1F800209049 /* ACTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F8B19DE1C94C1F800209049 /* ACTest.xcdatamodeld */; };
 		3F8B19EB1C94C1F800209049 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8B19E41C94C1F800209049 /* main.m */; };
 		3F8B19EE1C94C2BE00209049 /* AVCRegionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8B19ED1C94C2BE00209049 /* AVCRegionListViewController.m */; };
-		3F8B19F11C94C2D800209049 /* AVCRegionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8B19F01C94C2D800209049 /* AVCRegionView.m */; };
 		3F8B19F41C94C6C600209049 /* AVCMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8B19F31C94C6C600209049 /* AVCMapViewController.m */; };
+		3FB033C01CA6486200583164 /* AVCRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB033BF1CA6486200583164 /* AVCRequest.m */; };
 		3FCAFEC71C95ABAD00BCD982 /* AVCGMapItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCAFEC61C95ABAD00BCD982 /* AVCGMapItem.m */; };
 		3FCAFECA1C95AC7900BCD982 /* AVCGMapItem+AVCBusiness.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCAFEC91C95AC7900BCD982 /* AVCGMapItem+AVCBusiness.m */; };
 		3FCAFECD1C95AD9200BCD982 /* AVCBaseProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCAFECC1C95AD9200BCD982 /* AVCBaseProvider.m */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F7637531CA64CA400457D3F /* UIView+AVCExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AVCExtensions.h"; sourceTree = "<group>"; };
+		3F7637541CA64CA400457D3F /* UIView+AVCExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AVCExtensions.m"; sourceTree = "<group>"; };
 		3F8B19D21C94C1F800209049 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F8B19D41C94C1F800209049 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F8B19D61C94C1F800209049 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,10 +51,10 @@
 		3F8B19E41C94C1F800209049 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3F8B19EC1C94C2BE00209049 /* AVCRegionListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCRegionListViewController.h; sourceTree = "<group>"; };
 		3F8B19ED1C94C2BE00209049 /* AVCRegionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCRegionListViewController.m; sourceTree = "<group>"; };
-		3F8B19EF1C94C2D800209049 /* AVCRegionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCRegionView.h; sourceTree = "<group>"; };
-		3F8B19F01C94C2D800209049 /* AVCRegionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCRegionView.m; sourceTree = "<group>"; };
 		3F8B19F21C94C6C600209049 /* AVCMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCMapViewController.h; sourceTree = "<group>"; };
 		3F8B19F31C94C6C600209049 /* AVCMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCMapViewController.m; sourceTree = "<group>"; };
+		3FB033BE1CA6486200583164 /* AVCRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCRequest.h; sourceTree = "<group>"; };
+		3FB033BF1CA6486200583164 /* AVCRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCRequest.m; sourceTree = "<group>"; };
 		3FCAFEC51C95ABAD00BCD982 /* AVCGMapItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCGMapItem.h; sourceTree = "<group>"; };
 		3FCAFEC61C95ABAD00BCD982 /* AVCGMapItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCGMapItem.m; sourceTree = "<group>"; };
 		3FCAFEC81C95AC7900BCD982 /* AVCGMapItem+AVCBusiness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVCGMapItem+AVCBusiness.h"; sourceTree = "<group>"; };
@@ -144,6 +147,8 @@
 			children = (
 				3FCAFEC51C95ABAD00BCD982 /* AVCGMapItem.h */,
 				3FCAFEC61C95ABAD00BCD982 /* AVCGMapItem.m */,
+				3FB033BE1CA6486200583164 /* AVCRequest.h */,
+				3FB033BF1CA6486200583164 /* AVCRequest.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -165,8 +170,8 @@
 		3F8B19E01C94C1F800209049 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3F8B19EF1C94C2D800209049 /* AVCRegionView.h */,
-				3F8B19F01C94C2D800209049 /* AVCRegionView.m */,
+				3F7637531CA64CA400457D3F /* UIView+AVCExtensions.h */,
+				3F7637541CA64CA400457D3F /* UIView+AVCExtensions.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -401,6 +406,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F8B19F41C94C6C600209049 /* AVCMapViewController.m in Sources */,
+				3FB033C01CA6486200583164 /* AVCRequest.m in Sources */,
 				3FCAFED61C95B2B000BCD982 /* AVCGMapItemProvider.m in Sources */,
 				3FCAFED31C95B11000BCD982 /* AVCRKObjectManagerProvider.m in Sources */,
 				3F8B19E81C94C1F800209049 /* AppDelegate.m in Sources */,
@@ -411,8 +417,8 @@
 				3F8B19EE1C94C2BE00209049 /* AVCRegionListViewController.m in Sources */,
 				3FCAFED01C95AEDB00BCD982 /* AVCConstants.m in Sources */,
 				3F8B19EB1C94C1F800209049 /* main.m in Sources */,
-				3F8B19F11C94C2D800209049 /* AVCRegionView.m in Sources */,
 				3F8B19E91C94C1F800209049 /* ACTest.xcdatamodeld in Sources */,
+				3F7637551CA64CA400457D3F /* UIView+AVCExtensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,7 @@
 #import "AVCBaseProvider.h"
 #import "AVCGMapItem.h"
 
-typedef void(^AVCGMapItemBlock)(AVCGMapItem *item, NSError *error);
+typedef void(^AVCGMapItemBlock)(NSArray *arrayItems, NSError *error);
 
 @interface AVCGMapItemProvider : AVCBaseProvider
 
