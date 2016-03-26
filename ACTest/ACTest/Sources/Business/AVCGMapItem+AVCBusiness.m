@@ -14,6 +14,7 @@
 
 +(void)searchAddress:(NSString *)address withCompletionHandler:(AVCGMapItemBlock)handler {
     __weak typeof(self) weakSelf = self;
+//    NSString *uft8Str = [NSString stringWithUTF8String:address];
     
     [AVCGMapItemProvider.new searchAddress:address withCompletionHandler:^(NSArray *arrayItems, NSError *error) {
         if(error) {
@@ -29,10 +30,10 @@
 
 +(NSArray *)prepareArrayWithItems:(NSArray *)arrayItems {
     if(arrayItems.count > 1) {
-        return @[[[AVCGMapItem alloc] initWithAddress:@"Display All on Map"], arrayItems];
+        return @[@[], @[[[AVCGMapItem alloc] initWithAddress:@"Display All on Map"]], arrayItems];
     }
     
-    return arrayItems;
+    return @[@[], arrayItems];
 }
 
 @end

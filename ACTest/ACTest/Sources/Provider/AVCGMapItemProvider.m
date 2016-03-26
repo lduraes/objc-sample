@@ -15,8 +15,9 @@ static NSString *const kRestProviderSearchItemKeyPath = @"results";
 
 -(void)searchAddress:(NSString *)address withCompletionHandler:(AVCGMapItemBlock)handler {
     AVCRequest *request = [[AVCRequest alloc] initWithAddress:address];
+    NSDictionary *dictParamsIn = @{@"address":address};
     
-    [self getObjectsAtPath:RKPathFromPatternWithObject(kRestProviderSearchItem, request) withParameters:nil withCompletionHandler:^(RKMappingResult *mappingResult, NSError *error) {
+    [self getObjectsAtPath:RKPathFromPatternWithObject(kRestProviderSearchItem, request) withParameters:dictParamsIn withCompletionHandler:^(RKMappingResult *mappingResult, NSError *error) {
         if(error) {
             handler(nil, error.code == kErrCodeServiceUnavailable ? [NSError errorWithDomain:kErrorDomain code:kErrCodeServiceUnavailable userInfo:@{NSLocalizedDescriptionKey:NSLocalizedString(@"errMsgAuthentication", nil)}] : error);
         }

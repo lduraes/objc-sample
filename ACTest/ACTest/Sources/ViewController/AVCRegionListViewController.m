@@ -24,7 +24,8 @@ static CGFloat kRegionCellHeight = 44.0;
 
 // enum
 typedef NS_ENUM(NSUInteger, ConfigTableViewHeader) {
-     RegionListTableViewAll
+     RegionListTableViewUnknown
+    ,RegionListTableViewAll
     ,RegionListTableViewItem
 };
 
@@ -83,11 +84,11 @@ typedef NS_ENUM(NSUInteger, ConfigTableViewHeader) {
 #pragma mark - UITableViewDataSource
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.arrayItems.count > 1 ? 2 : 1;
+    return self.arrayItems.count;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.arrayItems.count > 1 ? [self.arrayItems[section] count] : self.arrayItems.count;
+    return [self.arrayItems[section] count];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -119,7 +120,7 @@ typedef NS_ENUM(NSUInteger, ConfigTableViewHeader) {
 }
 
 -(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
-    [self clearTableViewRecords];
+//    [self clearTableViewRecords];
 }
 
 #pragma mark - Override

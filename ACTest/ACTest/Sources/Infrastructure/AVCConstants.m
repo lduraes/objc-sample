@@ -11,7 +11,7 @@
 @implementation AVCConstants
 
 NSString *const kRestProviderBaseUrl = @"http://maps.googleapis.com/";
-NSString *const kRestProviderSearchItem = @"maps/api/geocode/json?address=:address";
+NSString *const kRestProviderSearchItem = @"maps/api/geocode/json";
 
 NSString *const kErrorDomain = @"AVCErrorDomain";
 NSString *const kErrorPrefix = @"ERROR";
