@@ -22,13 +22,6 @@
 static NSString *kRegionCell = @"regionCell";
 static CGFloat kRegionCellHeight = 44.0;
 
-// enum
-typedef NS_ENUM(NSUInteger, ConfigTableViewHeader) {
-     RegionListTableViewUnknown
-    ,RegionListTableViewAll
-    ,RegionListTableViewItem
-};
-
 @interface AVCRegionListViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
