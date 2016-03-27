@@ -130,11 +130,8 @@
                             <constraint firstItem="SWT-y0-guO" firstAttribute="top" secondItem="SN5-5x-2mm" secondAttribute="bottom" id="uO7-2e-Is6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Map" id="TOa-HB-CbS">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="wJV-VZ-Mv8"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Map" id="TOa-HB-CbS"/>
                     <connections>
-                        <outlet property="addBarButtonItem" destination="wJV-VZ-Mv8" id="oug-VX-vCO"/>
                         <outlet property="mapView" destination="SWT-y0-guO" id="LPt-to-7Zu"/>
                     </connections>
                 </viewController>

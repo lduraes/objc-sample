@@ -12,9 +12,9 @@
 #import "SVProgressHUD.h"
 #import "UIView+AVCExtensions.h"
 
+static CGFloat const kRegionCellHeight = 44.0;
 static NSString *const kSegueRegionListToMap = @"segueRegionListToMap";
 static NSString *const kRegionCell = @"regionCell";
-static CGFloat const kRegionCellHeight = 44.0;
 
 @interface AVCRegionListViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
@@ -89,11 +89,17 @@ static CGFloat const kRegionCellHeight = 44.0;
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self setArraySelectedItems:[NSMutableArray array]];
     
-    if(indexPath.section == 2) {
-        [self.arraySelectedItems addObject:self.arrayItems[indexPath.section][indexPath.row]];
+    if(indexPath.section == 2) {            // just an item
+        AVCGMapItem *item = (AVCGMapItem *)self.arrayItems[indexPath.section][indexPath.row];
+        [self.arraySelectedItems addObject:item];
     }
     else {
-        [self setArraySelectedItems:self.arrayItems[2]];
+        if(self.arrayItems.count > 2) {     // table with display all on map & other items
+            [self setArraySelectedItems:self.arrayItems[2]];
+        }
+        else {                              // table with just one item
+            [self setArraySelectedItems:self.arrayItems[1]];
+        }
     }
     
     [self performSegueWithIdentifier:kSegueRegionListToMap sender:self];

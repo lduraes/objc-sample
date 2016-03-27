@@ -62,7 +62,6 @@
 #pragma mark - Override
 
 -(UIView *)maskView {
-//    UIView *view = [[UIView alloc] initWithFrame:self.bounds];
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y + 44, self.frame.size.width, self.frame.size.height)];
     [view setAutoresizingMask:UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth];
     [view setBackgroundColor:[UIColor colorWithRed:225.0/255.0 green:225.0/255.0 blue:225.0/255.0 alpha:1.0]];
