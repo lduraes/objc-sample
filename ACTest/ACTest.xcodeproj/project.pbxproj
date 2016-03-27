@@ -16,6 +16,8 @@
 		3F8B19EB1C94C1F800209049 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8B19E41C94C1F800209049 /* main.m */; };
 		3F8B19EE1C94C2BE00209049 /* AVCRegionListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8B19ED1C94C2BE00209049 /* AVCRegionListViewController.m */; };
 		3F8B19F41C94C6C600209049 /* AVCMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8B19F31C94C6C600209049 /* AVCMapViewController.m */; };
+		3F9095DD1CA7725A00F9B4AD /* AVCCustomAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9095DC1CA7725A00F9B4AD /* AVCCustomAnnotation.m */; };
+		3F9095DF1CA7799F00F9B4AD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F9095DE1CA7799F00F9B4AD /* MapKit.framework */; };
 		3FB033C01CA6486200583164 /* AVCRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB033BF1CA6486200583164 /* AVCRequest.m */; };
 		3FCAFEC71C95ABAD00BCD982 /* AVCGMapItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCAFEC61C95ABAD00BCD982 /* AVCGMapItem.m */; };
 		3FCAFECA1C95AC7900BCD982 /* AVCGMapItem+AVCBusiness.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCAFEC91C95AC7900BCD982 /* AVCGMapItem+AVCBusiness.m */; };
@@ -53,6 +55,9 @@
 		3F8B19ED1C94C2BE00209049 /* AVCRegionListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCRegionListViewController.m; sourceTree = "<group>"; };
 		3F8B19F21C94C6C600209049 /* AVCMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCMapViewController.h; sourceTree = "<group>"; };
 		3F8B19F31C94C6C600209049 /* AVCMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCMapViewController.m; sourceTree = "<group>"; };
+		3F9095DB1CA7725A00F9B4AD /* AVCCustomAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCCustomAnnotation.h; sourceTree = "<group>"; };
+		3F9095DC1CA7725A00F9B4AD /* AVCCustomAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCCustomAnnotation.m; sourceTree = "<group>"; };
+		3F9095DE1CA7799F00F9B4AD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3FB033BE1CA6486200583164 /* AVCRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCRequest.h; sourceTree = "<group>"; };
 		3FB033BF1CA6486200583164 /* AVCRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCRequest.m; sourceTree = "<group>"; };
 		3FCAFEC51C95ABAD00BCD982 /* AVCGMapItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCGMapItem.h; sourceTree = "<group>"; };
@@ -83,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F9095DF1CA7799F00F9B4AD /* MapKit.framework in Frameworks */,
 				A85F7EE46167DED76C716016 /* libPods-ACTest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -172,6 +178,8 @@
 			children = (
 				3F7637531CA64CA400457D3F /* UIView+AVCExtensions.h */,
 				3F7637541CA64CA400457D3F /* UIView+AVCExtensions.m */,
+				3F9095DB1CA7725A00F9B4AD /* AVCCustomAnnotation.h */,
+				3F9095DC1CA7725A00F9B4AD /* AVCCustomAnnotation.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -238,6 +246,7 @@
 		7C5F0B6B0E0FB0E0E0C10682 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3F9095DE1CA7799F00F9B4AD /* MapKit.framework */,
 				AF8B47F3166FCFA2EFDD997F /* libPods-ACTest.a */,
 			);
 			name = Frameworks;
@@ -409,6 +418,7 @@
 				3FB033C01CA6486200583164 /* AVCRequest.m in Sources */,
 				3FCAFED61C95B2B000BCD982 /* AVCGMapItemProvider.m in Sources */,
 				3FCAFED31C95B11000BCD982 /* AVCRKObjectManagerProvider.m in Sources */,
+				3F9095DD1CA7725A00F9B4AD /* AVCCustomAnnotation.m in Sources */,
 				3F8B19E81C94C1F800209049 /* AppDelegate.m in Sources */,
 				3FCAFEC71C95ABAD00BCD982 /* AVCGMapItem.m in Sources */,
 				3FCAFED91C95B7C900BCD982 /* AVCObjectMapping.m in Sources */,
@@ -549,11 +559,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/ACTest/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.avenuecode.ACTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -564,11 +576,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/ACTest/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.avenuecode.ACTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

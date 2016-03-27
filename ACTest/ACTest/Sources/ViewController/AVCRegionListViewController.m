@@ -7,14 +7,8 @@
 //
 
 #import "AVCRegionListViewController.h"
-
-// business
 #import "AVCGMapItem+AVCBusiness.h"
-
-// view controller
 #import "AVCMapViewController.h"
-
-// component
 #import "SVProgressHUD.h"
 #import "UIView+AVCExtensions.h"
 
@@ -26,6 +20,7 @@ static CGFloat kRegionCellHeight = 44.0;
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIView *viewNoRecords;
 @property (strong, nonatomic) IBOutlet UISearchDisplayController *searchDisplayController;
 @property (strong, nonatomic) NSArray *arrayItems;
 
@@ -35,18 +30,18 @@ static CGFloat kRegionCellHeight = 44.0;
 
 #pragma mark - Private
 
--(void)configComponents {
-    [self.searchBar becomeFirstResponder];
-    [self.tableView setTableFooterView:[[UIView alloc] initWithFrame:CGRectZero]];
-}
-
 -(void)clearTableViewRecords {
     NSString *searchString = [self.searchBar.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-   
+    
     if(searchString.length == 0) {
         [self.searchBar setText:@""];
         [self loadTableViewWithArrayItems:[NSArray array]];
     }
+}
+
+-(void)configComponents {
+    [self.searchBar becomeFirstResponder];
+    [self.tableView setTableFooterView:[[UIView alloc] initWithFrame:CGRectZero]];
 }
 
 -(void)loadTableViewWithArrayItems:(NSArray *)arrayItems {
@@ -54,13 +49,12 @@ static CGFloat kRegionCellHeight = 44.0;
     [self.tableView reloadData];
     
     if(self.arrayItems.count == 0) {
-        [self.tableView showViewNoRecordsFound];
+        [self.viewNoRecords showViewNoRecordsFound];
     }
 }
 
 -(void)performSearch {
     __weak typeof(self) weakSelf = self;
-    
     [SVProgressHUD showWithStatus:NSLocalizedString(@"infMsgAutheticating", nil)];
     
     [AVCGMapItem searchAddress:self.searchBar.text withCompletionHandler:^(NSArray *arrayItems, NSError *error) {
@@ -98,10 +92,6 @@ static CGFloat kRegionCellHeight = 44.0;
     return kRegionCellHeight;
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-}
-
 #pragma mark - UISearchBarDelegate
 
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
@@ -110,10 +100,6 @@ static CGFloat kRegionCellHeight = 44.0;
 
 -(void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
     [self clearTableViewRecords];
-}
-
--(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
-//    [self clearTableViewRecords];
 }
 
 #pragma mark - Override
@@ -125,7 +111,7 @@ static CGFloat kRegionCellHeight = 44.0;
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     AVCMapViewController *mapViewController = (AVCMapViewController *)segue.destinationViewController;
-    [mapViewController setArrayItems:self.arrayItems];
+    [mapViewController setArrayItems:self.arrayItems[1]];
 }
 
 @end

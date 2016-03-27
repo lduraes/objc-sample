@@ -13,7 +13,8 @@
 
 @property (strong, nonatomic) NSString *address;
 @property (strong, nonatomic) NSDictionary *dictLocation;
-@property (strong, nonatomic) CLLocation *coordinates;
+@property (assign, nonatomic) float latitude;
+@property (assign, nonatomic) float longitude;
 
 -(instancetype)initWithAddress:(NSString *)address;
 

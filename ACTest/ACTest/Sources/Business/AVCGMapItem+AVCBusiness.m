@@ -14,8 +14,7 @@
 
 +(void)searchAddress:(NSString *)address withCompletionHandler:(AVCGMapItemBlock)handler {
     __weak typeof(self) weakSelf = self;
-//    NSString *uft8Str = [NSString stringWithUTF8String:address];
-    
+
     [AVCGMapItemProvider.new searchAddress:address withCompletionHandler:^(NSArray *arrayItems, NSError *error) {
         if(error) {
             handler(nil, [NSError errorWithDomain:kErrorDomain code:kErrCodeServiceUnavailable userInfo:[NSDictionary dictionaryWithObject:NSLocalizedString(@"errMsgUserOrPassword", nil) forKey:NSLocalizedDescriptionKey]]);

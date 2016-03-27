@@ -8,6 +8,9 @@
 
 #import "AVCGMapItem.h"
 
+static NSString *const kLatitude = @"lat";
+static NSString *const kLongitude = @"lng";
+
 @implementation AVCGMapItem
 
 #pragma mark - Public
@@ -24,8 +27,8 @@
 
 -(void)setDictLocation:(NSDictionary *)dictLocation {
     _dictLocation = dictLocation;
-    CLLocation *cllocation = [[CLLocation alloc] initWithLatitude:[self.dictLocation[@"lat"] floatValue] longitude:[self.dictLocation[@"lng"] floatValue]];
-    [self setCoordinates:cllocation];
+    [self setLatitude:[self.dictLocation[kLatitude] floatValue]];
+    [self setLongitude:[self.dictLocation[kLongitude] floatValue]];
 }
 
 @end

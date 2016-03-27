@@ -10,12 +10,13 @@
 #import "AVCObjectMapping.h"
 
 static NSString *const kRestProviderSearchItemKeyPath = @"results";
+static NSString *const kRestProviderSearchItemParamIn = @"address";
 
 @implementation AVCGMapItemProvider
 
 -(void)searchAddress:(NSString *)address withCompletionHandler:(AVCGMapItemBlock)handler {
     AVCRequest *request = [[AVCRequest alloc] initWithAddress:address];
-    NSDictionary *dictParamsIn = @{@"address":address};
+    NSDictionary *dictParamsIn = @{kRestProviderSearchItemParamIn: address};
     
     [self getObjectsAtPath:RKPathFromPatternWithObject(kRestProviderSearchItem, request) withParameters:dictParamsIn withCompletionHandler:^(RKMappingResult *mappingResult, NSError *error) {
         if(error) {
