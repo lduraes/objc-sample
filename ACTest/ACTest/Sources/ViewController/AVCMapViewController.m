@@ -16,6 +16,7 @@ static CGFloat const kMetersPerMile = 1609.344;
 
 @interface AVCMapViewController () <MKMapViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *addBarButtonItem;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (strong, nonatomic) NSMutableArray *arrayAnnotations;
 
@@ -35,10 +36,10 @@ static CGFloat const kMetersPerMile = 1609.344;
     [self setArrayAnnotations:[NSMutableArray array]];
     
     __weak typeof(self) weakSelf = self;
-    [SVProgressHUD showWithStatus:NSLocalizedString(@"infMsgAutheticating", nil)];
+//    [SVProgressHUD showWithStatus:NSLocalizedString(@"infMsgAutheticating", nil)];
 
     [self.arrayItems enumerateObjectsUsingBlock:^(AVCGMapItem * _Nonnull item, NSUInteger idx, BOOL * _Nonnull stop) {
-        AVCCustomAnnotation *annotation = [[AVCCustomAnnotation alloc]  initWithMapItem:item];
+        AVCCustomAnnotation *annotation = [[AVCCustomAnnotation alloc] initWithMapItem:item];
         [weakSelf.arrayAnnotations addObject:annotation];
     }];
     
@@ -46,6 +47,8 @@ static CGFloat const kMetersPerMile = 1609.344;
         AVCCustomAnnotation *annotation = (AVCCustomAnnotation *)self.arrayAnnotations.lastObject;
         [self.mapView showAnnotations:self.arrayAnnotations animated:YES];
         [self zoomLocation:annotation.coordinate withRadius:(3 * kMetersPerMile)];
+        
+        self.navigationItem.rightBarButtonItem = self.arrayAnnotations.count > 1 ? nil : self.addBarButtonItem;
     }
 }
 
@@ -56,11 +59,11 @@ static CGFloat const kMetersPerMile = 1609.344;
 
 #pragma mark - MKMapViewDelegate methods
 
--(void)mapViewDidFinishRenderingMap:(MKMapView *)mapView fullyRendered:(BOOL)fullyRendered {
-    if(fullyRendered) {
-        [SVProgressHUD dismiss];
-    }
-}
+//-(void)mapViewDidFinishRenderingMap:(MKMapView *)mapView fullyRendered:(BOOL)fullyRendered {
+//    if(fullyRendered) {
+//        [SVProgressHUD dismiss];
+//    }
+//}
 
 #pragma mark - Override
 

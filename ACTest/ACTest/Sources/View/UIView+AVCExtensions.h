@@ -10,7 +10,7 @@
 
 @interface UIView (AVCExtensions)
 
--(void)hideView;
+-(void)hideViewNoRecordsFound;
 -(void)showViewNoRecordsFound;
 -(void)showViewWithMessage:(NSString *)errMessage;
 

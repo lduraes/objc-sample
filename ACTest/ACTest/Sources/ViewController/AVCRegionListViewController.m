@@ -12,17 +12,17 @@
 #import "SVProgressHUD.h"
 #import "UIView+AVCExtensions.h"
 
-// constant
-static NSString *kRegionCell = @"regionCell";
-static CGFloat kRegionCellHeight = 44.0;
+static NSString *const kSegueRegionListToMap = @"segueRegionListToMap";
+static NSString *const kRegionCell = @"regionCell";
+static CGFloat const kRegionCellHeight = 44.0;
 
 @interface AVCRegionListViewController () <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property (weak, nonatomic) IBOutlet UIView *viewNoRecords;
 @property (strong, nonatomic) IBOutlet UISearchDisplayController *searchDisplayController;
 @property (strong, nonatomic) NSArray *arrayItems;
+@property (strong, nonatomic) NSMutableArray *arraySelectedItems;
 
 @end
 
@@ -34,8 +34,8 @@ static CGFloat kRegionCellHeight = 44.0;
     NSString *searchString = [self.searchBar.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     
     if(searchString.length == 0) {
-        [self.searchBar setText:@""];
-        [self loadTableViewWithArrayItems:[NSArray array]];
+        [self loadTableViewWithArrayItems:@[@[], @[]]];
+        [self.tableView hideViewNoRecordsFound];
     }
 }
 
@@ -48,8 +48,8 @@ static CGFloat kRegionCellHeight = 44.0;
     [self setArrayItems:arrayItems];
     [self.tableView reloadData];
     
-    if(self.arrayItems.count == 0) {
-        [self.viewNoRecords showViewNoRecordsFound];
+    if([self.arrayItems[1] count] == 0) {
+        [self.tableView showViewNoRecordsFound];
     }
 }
 
@@ -86,6 +86,19 @@ static CGFloat kRegionCellHeight = 44.0;
     return regionCell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self setArraySelectedItems:[NSMutableArray array]];
+    
+    if(indexPath.section == 2) {
+        [self.arraySelectedItems addObject:self.arrayItems[indexPath.section][indexPath.row]];
+    }
+    else {
+        [self setArraySelectedItems:self.arrayItems[2]];
+    }
+    
+    [self performSegueWithIdentifier:kSegueRegionListToMap sender:self];
+}
+
 #pragma mark - UITableViewDelegate
 
 -(CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -102,6 +115,10 @@ static CGFloat kRegionCellHeight = 44.0;
     [self clearTableViewRecords];
 }
 
+-(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    [self clearTableViewRecords];
+}
+
 #pragma mark - Override
 
 -(void)viewDidLoad {
@@ -109,9 +126,13 @@ static CGFloat kRegionCellHeight = 44.0;
     [self configComponents];
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+-(BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(nullable id)sender {
+    return NO;
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(nullable id)sender {
     AVCMapViewController *mapViewController = (AVCMapViewController *)segue.destinationViewController;
-    [mapViewController setArrayItems:self.arrayItems[1]];
+    [mapViewController setArrayItems:self.arraySelectedItems];
 }
 
 @end
