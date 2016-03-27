@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-ACTestTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>RKValueTransformers.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -58,6 +63,11 @@
 			<true/>
 		</dict>
 		<key>61681BF0E677683490353B846C61A129</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6C0197FE81A80722B2227F21C7DA7282</key>
 		<dict>
 			<key>primary</key>
 			<true/>

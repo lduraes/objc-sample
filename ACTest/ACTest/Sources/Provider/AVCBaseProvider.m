@@ -51,8 +51,6 @@
 }
 
 -(void)failureWithPath:path withError:(NSError *)error withCompletionHandler:(MappingResultBlock)handler {
-//    [Helper trackError:NSStringFromSelector(_cmd) withError:error.localizedDescription withMoreInfo:@{@"service": [path stringByReplacingOccurrencesOfString:kPartialPath withString:@""]}];
-    
     if(error.code == kCFURLErrorTimedOut) {
         handler(nil, [NSError errorWithDomain:kErrorDomain code:kErrCodeServerTimedOut userInfo:@{NSLocalizedDescriptionKey:NSLocalizedString(@"errMsgServerTimedOut", nil)}]);
     }

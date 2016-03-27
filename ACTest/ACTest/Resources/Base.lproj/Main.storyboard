@@ -50,7 +50,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="dND-91-GME" kind="push" id="wpK-Rt-DTX"/>
+                                            <segue destination="dND-91-GME" kind="push" identifier="segueRegionListToMap" id="wpK-Rt-DTX"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

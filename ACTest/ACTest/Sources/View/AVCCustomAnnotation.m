@@ -39,4 +39,8 @@
     return self.mapItem.address;
 }
 
+-(NSString *)subtitle {
+    return [NSString stringWithFormat:@"(%f %f)", self.mapItem.latitude, self.mapItem.longitude];
+}
+
 @end
