@@ -15,16 +15,10 @@
 
 @implementation AVCGMapItemBusinessTests
 
--(void)setUp {
-    [super setUp];
-}
-
--(void)tearDown {
-    [super tearDown];
-}
+#pragma mark - Tests
 
 -(void)testSearchDisplayAllOnMap {
-    XCTestExpectation *testExpectation = [self expectationWithDescription:@"searchAddress"];
+    XCTestExpectation *testExpectation = [self expectationWithDescription:@"searchDisplayAllOnMap"];
     [AVCGMapItem searchAddress:@"new york" withCompletionHandler:^(NSArray *arrayItems, NSError *error) {
         XCTAssertNil(error);
         AVCGMapItem *item = (AVCGMapItem *)arrayItems[1][0];
@@ -36,7 +30,7 @@
 }
 
 -(void)testSearchOneAddress {
-    XCTestExpectation *testExpectation = [self expectationWithDescription:@"searchAddress"];
+    XCTestExpectation *testExpectation = [self expectationWithDescription:@"searchOneAddress"];
     [AVCGMapItem searchAddress:@"santos" withCompletionHandler:^(NSArray *arrayItems, NSError *error) {
         XCTAssertNil(error);
         AVCGMapItem *item = (AVCGMapItem *)arrayItems[1][0];
@@ -48,7 +42,7 @@
 }
 
 -(void)testSearchMoreThanOneAddress {
-    XCTestExpectation *testExpectation = [self expectationWithDescription:@"searchAddress"];
+    XCTestExpectation *testExpectation = [self expectationWithDescription:@"searchMoreThanOneAddress"];
     [AVCGMapItem searchAddress:@"springfield" withCompletionHandler:^(NSArray *arrayItems, NSError *error) {
         XCTAssertNil(error);
         AVCGMapItem *item = (AVCGMapItem *)arrayItems[2][0];
@@ -60,7 +54,7 @@
 }
 
 -(void)testSearchInvalidAddress {
-    XCTestExpectation *testExpectation = [self expectationWithDescription:@"searchAddress"];
+    XCTestExpectation *testExpectation = [self expectationWithDescription:@"searchInvalidAddress"];
     [AVCGMapItem searchAddress:@"sxptoydsadsa" withCompletionHandler:^(NSArray *arrayItems, NSError *error) {
         XCTAssertNil(error);
         XCTAssertTrue([arrayItems[1] count] == 0);
@@ -68,6 +62,16 @@
     }];
     
     [self waitForExpectationsWithTimeout:3.0 handler:nil];
+}
+
+#pragma mark - Override
+
+-(void)setUp {
+    [super setUp];
+}
+
+-(void)tearDown {
+    [super tearDown];
 }
 
 @end

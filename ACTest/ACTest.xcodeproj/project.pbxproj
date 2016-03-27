@@ -24,6 +24,7 @@
 		3F9F95951CA86A03008D4F01 /* AVCPlaceProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9F95941CA86A03008D4F01 /* AVCPlaceProvider.m */; };
 		3FB033C01CA6486200583164 /* AVCRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB033BF1CA6486200583164 /* AVCRequest.m */; };
 		3FC066FC1CA8878800894ACE /* AVCGMapItemBusinessTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC066FB1CA8878800894ACE /* AVCGMapItemBusinessTests.m */; };
+		3FC066FE1CA88BBC00894ACE /* AVCPlaceBusinessTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC066FD1CA88BBC00894ACE /* AVCPlaceBusinessTests.m */; };
 		3FCAFEC71C95ABAD00BCD982 /* AVCGMapItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCAFEC61C95ABAD00BCD982 /* AVCGMapItem.m */; };
 		3FCAFECA1C95AC7900BCD982 /* AVCGMapItem+AVCBusiness.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCAFEC91C95AC7900BCD982 /* AVCGMapItem+AVCBusiness.m */; };
 		3FCAFECD1C95AD9200BCD982 /* AVCBaseProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCAFECC1C95AD9200BCD982 /* AVCBaseProvider.m */; };
@@ -74,6 +75,7 @@
 		3FB033BE1CA6486200583164 /* AVCRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCRequest.h; sourceTree = "<group>"; };
 		3FB033BF1CA6486200583164 /* AVCRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCRequest.m; sourceTree = "<group>"; };
 		3FC066FB1CA8878800894ACE /* AVCGMapItemBusinessTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCGMapItemBusinessTests.m; sourceTree = "<group>"; };
+		3FC066FD1CA88BBC00894ACE /* AVCPlaceBusinessTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCPlaceBusinessTests.m; sourceTree = "<group>"; };
 		3FCAFEC51C95ABAD00BCD982 /* AVCGMapItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCGMapItem.h; sourceTree = "<group>"; };
 		3FCAFEC61C95ABAD00BCD982 /* AVCGMapItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCGMapItem.m; sourceTree = "<group>"; };
 		3FCAFEC81C95AC7900BCD982 /* AVCGMapItem+AVCBusiness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVCGMapItem+AVCBusiness.h"; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 			children = (
 				3FE361FC1C94BF3800923404 /* Info.plist */,
 				3FC066FB1CA8878800894ACE /* AVCGMapItemBusinessTests.m */,
+				3FC066FD1CA88BBC00894ACE /* AVCPlaceBusinessTests.m */,
 			);
 			path = ACTestTests;
 			sourceTree = "<group>";
@@ -516,6 +519,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FC066FE1CA88BBC00894ACE /* AVCPlaceBusinessTests.m in Sources */,
 				3FC066FC1CA8878800894ACE /* AVCGMapItemBusinessTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
