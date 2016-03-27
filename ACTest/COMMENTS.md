@@ -14,14 +14,5 @@ Most of friends who also work with mobile know the architecture that I applied i
 0. SVProgressHUD
 
 ##If I would have more time...
-- Try to write it in Swift
-
-##Unfinished tasks
-0. I would finish XCTests
-0. I would add Calabash library as well as a functional test (perhaps it could count as a plus) 
-
-
-#PS
-In case of any doubt, please feel free to contact me.
-
-Cheers.
+- Send a second version of this test written in Swift
+- Add Calabash library as well as functional tests

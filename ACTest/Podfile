@@ -4,11 +4,11 @@
 # use_frameworks!
 
 target 'ACTest' do
-pod 'SVProgressHUD'
 pod 'RestKit'
+pod 'SVProgressHUD'
 end
 
 target 'ACTestTests' do
-
+pod 'RestKit'
 end
 

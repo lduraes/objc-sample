@@ -23,6 +23,7 @@
 		3F9F95921CA8668B008D4F01 /* AVCPlace+AVCBusiness.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9F95911CA8668B008D4F01 /* AVCPlace+AVCBusiness.m */; };
 		3F9F95951CA86A03008D4F01 /* AVCPlaceProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9F95941CA86A03008D4F01 /* AVCPlaceProvider.m */; };
 		3FB033C01CA6486200583164 /* AVCRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB033BF1CA6486200583164 /* AVCRequest.m */; };
+		3FC066FC1CA8878800894ACE /* AVCGMapItemBusinessTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FC066FB1CA8878800894ACE /* AVCGMapItemBusinessTests.m */; };
 		3FCAFEC71C95ABAD00BCD982 /* AVCGMapItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCAFEC61C95ABAD00BCD982 /* AVCGMapItem.m */; };
 		3FCAFECA1C95AC7900BCD982 /* AVCGMapItem+AVCBusiness.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCAFEC91C95AC7900BCD982 /* AVCGMapItem+AVCBusiness.m */; };
 		3FCAFECD1C95AD9200BCD982 /* AVCBaseProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCAFECC1C95AD9200BCD982 /* AVCBaseProvider.m */; };
@@ -30,8 +31,8 @@
 		3FCAFED31C95B11000BCD982 /* AVCRKObjectManagerProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCAFED21C95B11000BCD982 /* AVCRKObjectManagerProvider.m */; };
 		3FCAFED61C95B2B000BCD982 /* AVCGMapItemProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCAFED51C95B2B000BCD982 /* AVCGMapItemProvider.m */; };
 		3FCAFED91C95B7C900BCD982 /* AVCObjectMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCAFED81C95B7C900BCD982 /* AVCObjectMapping.m */; };
-		3FE361FB1C94BF3800923404 /* ACTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE361FA1C94BF3800923404 /* ACTestTests.m */; };
 		A85F7EE46167DED76C716016 /* libPods-ACTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF8B47F3166FCFA2EFDD997F /* libPods-ACTest.a */; };
+		E67C61A704447C42B3C121DB /* libPods-ACTestTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 846E41F658E8FEFB3AA20B6A /* libPods-ACTestTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		3F9F95941CA86A03008D4F01 /* AVCPlaceProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCPlaceProvider.m; sourceTree = "<group>"; };
 		3FB033BE1CA6486200583164 /* AVCRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCRequest.h; sourceTree = "<group>"; };
 		3FB033BF1CA6486200583164 /* AVCRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCRequest.m; sourceTree = "<group>"; };
+		3FC066FB1CA8878800894ACE /* AVCGMapItemBusinessTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCGMapItemBusinessTests.m; sourceTree = "<group>"; };
 		3FCAFEC51C95ABAD00BCD982 /* AVCGMapItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVCGMapItem.h; sourceTree = "<group>"; };
 		3FCAFEC61C95ABAD00BCD982 /* AVCGMapItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCGMapItem.m; sourceTree = "<group>"; };
 		3FCAFEC81C95AC7900BCD982 /* AVCGMapItem+AVCBusiness.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVCGMapItem+AVCBusiness.h"; sourceTree = "<group>"; };
@@ -88,10 +90,12 @@
 		3FCAFED81C95B7C900BCD982 /* AVCObjectMapping.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVCObjectMapping.m; sourceTree = "<group>"; };
 		3FE361DA1C94BF3800923404 /* ACTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE361F61C94BF3800923404 /* ACTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ACTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3FE361FA1C94BF3800923404 /* ACTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACTestTests.m; sourceTree = "<group>"; };
 		3FE361FC1C94BF3800923404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		846E41F658E8FEFB3AA20B6A /* libPods-ACTestTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ACTestTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		94373DE95C8E614747AEE5C0 /* Pods-ACTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACTestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ACTestTests/Pods-ACTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AF8B47F3166FCFA2EFDD997F /* libPods-ACTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ACTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD770D35212404F828DD26EB /* Pods-ACTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ACTest/Pods-ACTest.debug.xcconfig"; sourceTree = "<group>"; };
+		C93176A822BF1CA6D2D16853 /* Pods-ACTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACTestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ACTestTests/Pods-ACTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		E87E8578F452A6EB27847719 /* Pods-ACTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-ACTest/Pods-ACTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E67C61A704447C42B3C121DB /* libPods-ACTestTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +262,8 @@
 		3FE361F91C94BF3800923404 /* ACTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				3FE361FA1C94BF3800923404 /* ACTestTests.m */,
 				3FE361FC1C94BF3800923404 /* Info.plist */,
+				3FC066FB1CA8878800894ACE /* AVCGMapItemBusinessTests.m */,
 			);
 			path = ACTestTests;
 			sourceTree = "<group>";
@@ -268,6 +273,7 @@
 			children = (
 				3F9095DE1CA7799F00F9B4AD /* MapKit.framework */,
 				AF8B47F3166FCFA2EFDD997F /* libPods-ACTest.a */,
+				846E41F658E8FEFB3AA20B6A /* libPods-ACTestTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -277,6 +283,8 @@
 			children = (
 				BD770D35212404F828DD26EB /* Pods-ACTest.debug.xcconfig */,
 				E87E8578F452A6EB27847719 /* Pods-ACTest.release.xcconfig */,
+				94373DE95C8E614747AEE5C0 /* Pods-ACTestTests.debug.xcconfig */,
+				C93176A822BF1CA6D2D16853 /* Pods-ACTestTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -308,9 +316,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3FE362021C94BF3800923404 /* Build configuration list for PBXNativeTarget "ACTestTests" */;
 			buildPhases = (
+				A6B8D81AFF4D940441E9EE55 /* Check Pods Manifest.lock */,
 				3FE361F21C94BF3800923404 /* Sources */,
 				3FE361F31C94BF3800923404 /* Frameworks */,
 				3FE361F41C94BF3800923404 /* Resources */,
+				DAA7BA00B74605537290DAEC /* Embed Pods Frameworks */,
+				950A30459126AB056E3EFBCD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -397,6 +408,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		950A30459126AB056E3EFBCD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ACTestTests/Pods-ACTestTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9D25C162EF1D2EE162C6F153 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -410,6 +436,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ACTest/Pods-ACTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6B8D81AFF4D940441E9EE55 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DAA7BA00B74605537290DAEC /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ACTestTests/Pods-ACTestTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F7E6A273F8F30BF73C5F22C1 /* Embed Pods Frameworks */ = {
@@ -460,7 +516,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FE361FB1C94BF3800923404 /* ACTestTests.m in Sources */,
+				3FC066FC1CA8878800894ACE /* AVCGMapItemBusinessTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -612,6 +668,7 @@
 		};
 		3FE362031C94BF3800923404 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94373DE95C8E614747AEE5C0 /* Pods-ACTestTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ACTestTests/Info.plist;
@@ -624,6 +681,7 @@
 		};
 		3FE362041C94BF3800923404 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C93176A822BF1CA6D2D16853 /* Pods-ACTestTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ACTestTests/Info.plist;
