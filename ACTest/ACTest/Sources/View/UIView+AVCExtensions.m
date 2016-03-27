@@ -21,7 +21,7 @@
 }
 
 -(void)showViewNoRecordsFound {
-    [self showViewWithMessage:NSLocalizedString(@"errMsgPrinterConnection", nil)];
+    [self showViewWithMessage:NSLocalizedString(@"errNoRecordFound", nil)];
 }
 
 -(void)showViewWithMessage:(NSString *)errMessage {

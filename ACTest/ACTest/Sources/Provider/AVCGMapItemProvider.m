@@ -14,13 +14,15 @@ static NSString *const kRestProviderSearchItemParamIn = @"address";
 
 @implementation AVCGMapItemProvider
 
+#pragma mark - Public
+
 -(void)searchAddress:(NSString *)address withCompletionHandler:(AVCGMapItemBlock)handler {
     AVCRequest *request = [[AVCRequest alloc] initWithAddress:address];
     NSDictionary *dictParamsIn = @{kRestProviderSearchItemParamIn: address};
     
     [self getObjectsAtPath:RKPathFromPatternWithObject(kRestProviderSearchItem, request) withParameters:dictParamsIn withCompletionHandler:^(RKMappingResult *mappingResult, NSError *error) {
         if(error) {
-            handler(nil, error.code == kErrCodeServiceUnavailable ? [NSError errorWithDomain:kErrorDomain code:kErrCodeServiceUnavailable userInfo:@{NSLocalizedDescriptionKey:NSLocalizedString(@"errMsgAuthentication", nil)}] : error);
+            handler(nil, error.code == kErrCodeServiceUnavailable ? [NSError errorWithDomain:kErrorDomain code:kErrCodeServiceUnavailable userInfo:@{NSLocalizedDescriptionKey:NSLocalizedString(@"errMsgRetrievingAddress", nil)}] : error);
         }
         else {
             handler(mappingResult.array, error);

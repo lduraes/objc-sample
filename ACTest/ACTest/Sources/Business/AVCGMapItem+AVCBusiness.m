@@ -8,6 +8,8 @@
 
 #import "AVCGMapItem+AVCBusiness.h"
 
+static NSString *const kAllItems = @"Display All on Map";
+
 @implementation AVCGMapItem (AVCBusiness)
 
 #pragma mark - Public
@@ -17,7 +19,7 @@
 
     [AVCGMapItemProvider.new searchAddress:address withCompletionHandler:^(NSArray *arrayItems, NSError *error) {
         if(error) {
-            handler(nil, [NSError errorWithDomain:kErrorDomain code:kErrCodeServiceUnavailable userInfo:[NSDictionary dictionaryWithObject:NSLocalizedString(@"errMsgUserOrPassword", nil) forKey:NSLocalizedDescriptionKey]]);
+            handler(nil, error);
         }
         else {
             handler([weakSelf prepareArrayWithItems:arrayItems], nil);
@@ -29,7 +31,7 @@
 
 +(NSArray *)prepareArrayWithItems:(NSArray *)arrayItems {
     if(arrayItems.count > 1) {
-        return @[@[], @[[[AVCGMapItem alloc] initWithAddress:@"Display All on Map"]], arrayItems];
+        return @[@[], @[[[AVCGMapItem alloc] initWithAddress:kAllItems]], arrayItems];
     }
     
     return @[@[], arrayItems];

@@ -14,7 +14,7 @@
 
 static CGFloat const kMetersPerMile = 1609.344;
 
-@interface AVCMapViewController () <MKMapViewDelegate>
+@interface AVCMapViewController () <UIAlertViewDelegate>
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @property (strong, nonatomic) NSMutableArray *arrayAnnotations;
@@ -30,28 +30,27 @@ static CGFloat const kMetersPerMile = 1609.344;
 -(void)configComponents {
     [self loadAnnotations];
     
+    [self dropPinsOnScreen];
+
     if(self.arrayAnnotations.count > 1) {
         [self.navigationItem setRightBarButtonItem:nil];
         return;
     }
     
     [self showActionButton];
-    [self dropPinsOnScreen];
 }
 
 #pragma mark - Private
 
 -(void)addPlace {
     if([AVCPlace addItem:self.item]) {
-        NSLog(@"Record added");
+        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"wrnMsgTitle", nil) message:NSLocalizedString(@"wrnMsgAddPin", nil) delegate:self cancelButtonTitle:NSLocalizedString(@"btnOk", nil) otherButtonTitles:nil, nil] show];
+        [self showActionButton];
     }
 }
 
 -(void)deletePlace {
-    if([AVCPlace deletePlace:self.place]) {
-        [self.mapView removeAnnotations:self.arrayAnnotations];
-        [self.navigationItem setRightBarButtonItem:nil];
-    }
+    [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"wrnMsgTitle", nil) message:NSLocalizedString(@"wrnMsgDeletePin", nil) delegate:self cancelButtonTitle:NSLocalizedString(@"btnCancel", nil) otherButtonTitles:NSLocalizedString(@"btnConfirm", nil), nil] show];
 }
 
 -(void)dropPinsOnScreen {
@@ -85,6 +84,17 @@ static CGFloat const kMetersPerMile = 1609.344;
 -(void)zoomLocation:(CLLocationCoordinate2D)coordinate withRadius:(CGFloat)radius {
     MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(coordinate, radius, radius);
     [self.mapView setRegion:[self.mapView regionThatFits:viewRegion] animated:NO];
+}
+
+#pragma mark - UIAlertViewDelegate
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if(buttonIndex == 1) {
+        if([AVCPlace deletePlace:self.place]) {
+            [self.mapView removeAnnotations:self.arrayAnnotations];
+            [self.navigationItem setRightBarButtonItem:nil];
+        }
+    }
 }
 
 #pragma mark - Override

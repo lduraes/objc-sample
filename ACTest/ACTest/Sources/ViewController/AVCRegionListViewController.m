@@ -55,7 +55,7 @@ static NSString *const kRegionCell = @"regionCell";
 
 -(void)performSearch {
     __weak typeof(self) weakSelf = self;
-    [SVProgressHUD showWithStatus:NSLocalizedString(@"infMsgAutheticating", nil)];
+    [SVProgressHUD showWithStatus:NSLocalizedString(@"infMsgLoadingRecords", nil)];
     
     [AVCGMapItem searchAddress:self.searchBar.text withCompletionHandler:^(NSArray *arrayItems, NSError *error) {
         [SVProgressHUD dismiss];
