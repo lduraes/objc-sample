@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  ACTest
+
+  Created by Luiz Duraes on 3/27/16.
+  Copyright © 2016 Avenue Code. All rights reserved.
+*/
+
+"errNoRecordFound" = "No Results";
+"errMsgServerTimedOut" = "Server unavailable right now. Please try again later";
+"errMsgServiceUnavailable" = "Ops! Unexpected error occurred";
+"errMsgRetrievingAddress" = "Error retrieving address";
+"infMsgLoadingRecords" = "Loading records";
+"wrnMsgTitle" = "Attention";
+"wrnMsgDeletePin" = "Do you really want to remove pin?";
+"wrnMsgAddPin" = "Pin added to local database";
+"btnConfirm" = "Confirm";
+"btnCancel" = "Cancel";
+"btnOk" = "Ok";
