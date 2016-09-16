@@ -3,7 +3,7 @@
 //  ACTest
 //
 //  Created by Luiz Duraes on 3/13/16.
-//  Copyright © 2016 Avenue Code. All rights reserved.
+//  Copyright © 2016 Mob4U IT Solutions. All rights reserved.
 //
 
 #import "AVCBaseProvider.h"
@@ -19,8 +19,7 @@
     [self.objectManager getObjectsAtPath:path parameters:parameters success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         if(mappingResult) {
             handler(mappingResult, nil);
-        }
-        else {
+        } else {
             handler(nil, [NSError errorWithDomain:kErrorDomain code:kErrCodeNoRecordFound userInfo:@{NSLocalizedDescriptionKey:NSLocalizedString(@"errNoRecordFound", nil)}]);
         }
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
@@ -53,8 +52,7 @@
 -(void)failureWithPath:path withError:(NSError *)error withCompletionHandler:(MappingResultBlock)handler {
     if(error.code == kCFURLErrorTimedOut) {
         handler(nil, [NSError errorWithDomain:kErrorDomain code:kErrCodeServerTimedOut userInfo:@{NSLocalizedDescriptionKey:NSLocalizedString(@"errMsgServerTimedOut", nil)}]);
-    }
-    else {
+    } else {
         handler(nil, [NSError errorWithDomain:kErrorDomain code:kErrCodeServiceUnavailable userInfo:@{NSLocalizedDescriptionKey:NSLocalizedString(@"errMsgServiceUnavailable", nil)}]);
     }
 }

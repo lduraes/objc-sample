@@ -3,7 +3,7 @@
 //  ACTest
 //
 //  Created by Luiz Duraes on 3/12/16.
-//  Copyright © 2016 Avenue Code. All rights reserved.
+//  Copyright © 2016 Mob4U IT Solutions. All rights reserved.
 //
 
 #import "AVCMapViewController.h"
@@ -75,8 +75,7 @@ static CGFloat const kMetersPerMile = 1609.344;
     
     if(self.place) {
         [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemStop target:self action:@selector(deletePlace)]];
-    }
-    else {
+    } else {
         [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addPlace)]];
     }
 }

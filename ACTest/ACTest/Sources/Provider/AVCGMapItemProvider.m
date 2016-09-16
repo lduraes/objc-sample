@@ -3,7 +3,7 @@
 //  ACTest
 //
 //  Created by Luiz Duraes on 3/13/16.
-//  Copyright © 2016 Avenue Code. All rights reserved.
+//  Copyright © 2016 Mob4U IT Solutions. All rights reserved.
 //
 
 #import "AVCGMapItemProvider.h"
@@ -23,8 +23,7 @@ static NSString *const kRestProviderSearchItemParamIn = @"address";
     [self getObjectsAtPath:RKPathFromPatternWithObject(kRestProviderSearchItem, request) withParameters:dictParamsIn withCompletionHandler:^(RKMappingResult *mappingResult, NSError *error) {
         if(error) {
             handler(nil, error.code == kErrCodeServiceUnavailable ? [NSError errorWithDomain:kErrorDomain code:kErrCodeServiceUnavailable userInfo:@{NSLocalizedDescriptionKey:NSLocalizedString(@"errMsgRetrievingAddress", nil)}] : error);
-        }
-        else {
+        } else {
             handler(mappingResult.array, error);
         }
     }];

@@ -348,11 +348,11 @@
 			attributes = {
 				CLASSPREFIX = AVC;
 				LastUpgradeCheck = 0720;
-				ORGANIZATIONNAME = "Avenue Code";
+				ORGANIZATIONNAME = "Mob4U IT Solutions";
 				TargetAttributes = {
 					3FE361D91C94BF3800923404 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = HP5N6338BF;
+						DevelopmentTeam = F4L3P2W5G2;
 					};
 					3FE361F51C94BF3800923404 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -661,7 +661,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/ACTest/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.avenuecode.ACTest;
+				PRODUCT_BUNDLE_IDENTIFIER = us.duraes.ACTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -678,7 +678,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/ACTest/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.avenuecode.ACTest;
+				PRODUCT_BUNDLE_IDENTIFIER = us.duraes.ACTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -691,7 +691,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ACTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.avenuecode.ACTestTests;
+				PRODUCT_BUNDLE_IDENTIFIER = us.duraes.ACTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ACTest.app/ACTest";
 			};
@@ -704,7 +704,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ACTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.avenuecode.ACTestTests;
+				PRODUCT_BUNDLE_IDENTIFIER = us.duraes.ACTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ACTest.app/ACTest";
 			};

@@ -3,7 +3,7 @@
 //  ACTest
 //
 //  Created by Luiz Duraes on 3/12/16.
-//  Copyright © 2016 Avenue Code. All rights reserved.
+//  Copyright © 2016 Mob4U IT Solutions. All rights reserved.
 //
 
 #import "AVCRegionListViewController.h"
@@ -97,12 +97,10 @@ typedef NS_ENUM(NSInteger, TableViewSection) {
     if(indexPath.section == TableViewSectionRecords) {          // just an item
         AVCGMapItem *item = (AVCGMapItem *)self.arrayItems[indexPath.section][indexPath.row];
         [self.arraySelectedItems addObject:item];
-    }
-    else {
+    } else {
         if(self.arrayItems.count > 2) {                         // table with display all on map & other items
             [self setArraySelectedItems:self.arrayItems[TableViewSectionRecords]];
-        }
-        else {                                                  // table with just one item
+        } else {                                                // table with just one item
             [self setArraySelectedItems:self.arrayItems[TableViewSectionAll]];
         }
     }

@@ -3,7 +3,7 @@
 //  ACTest
 //
 //  Created by Luiz Duraes on 3/13/16.
-//  Copyright © 2016 Avenue Code. All rights reserved.
+//  Copyright © 2016 Mob4U IT Solutions. All rights reserved.
 //
 
 #import "AVCGMapItem+AVCBusiness.h"
@@ -20,8 +20,7 @@ static NSString *const kAllItems = @"Display All on Map";
     [AVCGMapItemProvider.new searchAddress:address withCompletionHandler:^(NSArray *arrayItems, NSError *error) {
         if(error) {
             handler(nil, error);
-        }
-        else {
+        } else {
             handler([weakSelf prepareArrayWithItems:arrayItems], nil);
         }
     }];
