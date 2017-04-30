@@ -1,0 +1,12 @@
+language: objective-c
+osx_image: xcode8.3
+xcode_workspace: ACTest.xcworkspace
+xcode_scheme: ACTest
+#xcode_sdk: 
+podfile: ACTest/Podfile
+before_install:
+- pod install --verbose
+script:
+- xcodebuild -workspace ACTest.xcworkspace -scheme ACTest -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO #build | xcpretty - c
+- xctool test -workspace ACTest.xcworkspace -scheme ACTestTests -sdl iphonesimulator ONLY_ACTIVE_ARCH=NO
+#xcode_project: ACTest/ACTest.xcodeproj
