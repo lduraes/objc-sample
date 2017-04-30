@@ -11,8 +11,8 @@ notifications:
   - mob4u:PlQsur38iWC4HpLBx4IahnaL
 
 before_install:
-  - gem install -xcov --no-ri --no-rdoc --no-document
   - gem update fastlane --no-ri --no-rdoc --no-document
+  - gem install xcov --no-ri --no-rdoc --no-document
 
 script: travis/script.sh
 after_sucess: travis/after_success.sh
