@@ -1,12 +1,33 @@
 language: objective-c
+cache: cocoapods
 osx_image: xcode8.3
-xcode_workspace: ACTest.xcworkspace
-xcode_scheme: ACTest
-#xcode_sdk: 
-podfile: ACTest/Podfile
+
+notifications:
+  email: 
+  - lduraes@gmail.com
+  - lduraes@ciandt.com
+
+  slack:
+  - mob4u:PlQsur38iWC4HpLBx4IahnaL
+
 before_install:
-- pod install --verbose
-script:
-- xcodebuild -workspace ACTest.xcworkspace -scheme ACTest -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO #build | xcpretty - c
-- xctool test -workspace ACTest.xcworkspace -scheme ACTestTests -sdl iphonesimulator ONLY_ACTIVE_ARCH=NO
+  - gem install -xcov --no-ri --no-rdoc --no-document
+  - gem update fastlane --no-ri --no-rdoc --no-document
+
+script: travis/script.sh
+after_sucess: travis/after_success.sh
+
+
+##xcode_workspace: ACTest.xcworkspace
+##xcode_scheme: ACTest
+
+##podfile: ACTest/Podfile
+##before_install:
+##- pod install
+
+##script:
+##- xcodebuild -workspace ACTest.xcworkspace -scheme ACTest -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO #build | xcpretty - c
+##- xctool test -workspace ACTest.xcworkspace -scheme ACTestTests -sdl iphonesimulator ONLY_ACTIVE_ARCH=NO
 #xcode_project: ACTest/ACTest.xcodeproj
+
+#xcode_sdk: 
