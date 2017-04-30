@@ -5,7 +5,7 @@ osx_image: xcode8.3
 notifications:
   email: 
   - lduraes@gmail.com
-  - lduraes@ciandt.com
+  #- lduraes@ciandt.com
 
   slack:
   - mob4u:PlQsur38iWC4HpLBx4IahnaL
