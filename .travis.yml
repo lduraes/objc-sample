@@ -1,8 +1,6 @@
 language: objective-c
 cache: cocoapods
 osx_image: xcode8.3
-xcode_workspace: ACTest/ACTest.xcworkspace
-#xcode_scheme: ACTest/ACTest
 
 notifications:
   email: 
@@ -17,6 +15,9 @@ before_install:
 
 script: travis/script.sh
 after_sucess: travis/after_success.sh
+
+#xcode_workspace: ACTest/ACTest.xcworkspace
+#xcode_scheme: ACTest/ACTest
 
 ##podfile: ACTest/Podfile
 ##before_install:
