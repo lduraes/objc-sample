@@ -29,9 +29,9 @@ platform :ios do
 	workspace: "ACTest/ACTest.xcworkspace",
 	clean: true,
 	code_coverage: true,
-	#skip_slack: false,
-	#sdk: "iphonesimulator",
-	#destination: "name= iPhone 6" 
+	skip_slack: false,
+	sdk: "iOS Simulator",
+	destination: "name= iPhone 7" 
     )
   end
 
