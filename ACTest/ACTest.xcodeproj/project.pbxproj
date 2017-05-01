@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		3FE2C8321EB7C7D000169745 /* OCLint */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 3FE2C8351EB7C7D000169745 /* Build configuration list for PBXAggregateTarget "OCLint" */;
+			buildPhases = (
+				3FE2C8361EB7C7EE00169745 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = OCLint;
+			productName = OCLint;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		208722EDA4DF90D7AA15CFF3 /* libPods-ACTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44D00DFF03D27B1F8D22226A /* libPods-ACTest.a */; };
 		3F7637551CA64CA400457D3F /* UIView+AVCExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7637541CA64CA400457D3F /* UIView+AVCExtensions.m */; };
@@ -350,6 +364,10 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Mob4U IT Solutions";
 				TargetAttributes = {
+					3FE2C8321EB7C7D000169745 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
 					3FE361D91C94BF3800923404 = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
@@ -374,6 +392,7 @@
 			targets = (
 				3FE361D91C94BF3800923404 /* ACTest */,
 				3FE361F51C94BF3800923404 /* ACTestTests */,
+				3FE2C8321EB7C7D000169745 /* OCLint */,
 			);
 		};
 /* End PBXProject section */
@@ -414,6 +433,19 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
+		};
+		3FE2C8361EB7C7EE00169745 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "xcodebuild -workspace ACTest.xcworkspace -scheme ACTest -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 7' clean build | tee xcodebuild.log\noclint-xcodebuild\n\noclint-json-compilation-database -e Pods -v -- -report-type pmd -o oclint.xml\n#oclint-json-compilation-database -v -enable-clang-static-analyzer -e Pods* -- -report-type pmd -o oclint.xml";
 		};
 		4919906D75D12D92CEE8E926 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -567,6 +599,20 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		3FE2C8331EB7C7D000169745 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3FE2C8341EB7C7D000169745 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		3FE361FD1C94BF3800923404 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -714,6 +760,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3FE2C8351EB7C7D000169745 /* Build configuration list for PBXAggregateTarget "OCLint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FE2C8331EB7C7D000169745 /* Debug */,
+				3FE2C8341EB7C7D000169745 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		3FE361D51C94BF3800923404 /* Build configuration list for PBXProject "ACTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

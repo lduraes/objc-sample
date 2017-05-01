@@ -2,6 +2,11 @@
 #
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
+## OCLint
+ACTest/compile_commands.json
+ACTest/oclint.xml
+ACTest/xcodebuild.log
+
 ## Build generated
 build/
 DerivedData

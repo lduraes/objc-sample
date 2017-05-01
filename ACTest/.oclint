@@ -1,0 +1,33 @@
+# OCLint config example
+
+rules:
+disable-rules:
+  - GotoStatement
+  - UnusedMethodParameter
+  - EmptyIfStatement
+  - SwitchStatementsDon'TNeedDefaultWhenFullyCovered
+
+rule-configurations:
+  - key: LONG_LINE
+    value: 300
+  - key: SHORT_VARIABLE_NAME
+    value: 1
+  - key: LONG_VARIABLE_NAME
+    value: 64
+#  - key: LONG_METHOD
+#    value: 150
+#  - key: LONG_CLASS
+#    value: 350
+#  - key: NESTED_BLOCK_DEPTH
+#    value: 3
+#  - key: TOO_MANY_PARAMETERS
+#    value: 5
+
+output: oclint.html
+report-type: html 
+
+max-priority-1: 0
+max-priority-2: 20
+max-priority-3: 30
+
+enable-clang-static-analyzer: false
