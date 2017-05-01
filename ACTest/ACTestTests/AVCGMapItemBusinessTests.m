@@ -22,7 +22,7 @@
     [AVCGMapItem searchAddress:@"new york" withCompletionHandler:^(NSArray *arrayItems, NSError *error) {
         XCTAssertNil(error);
         AVCGMapItem *item = (AVCGMapItem *)arrayItems[1][0];
-        XCTAssertEqualObjects(@"Display All on Map", item.address, @"Fail retrieving - Display All on Map");
+        XCTAssertEqualObjects(@"New York, NY, USA", item.address, @"Fail retrieving - New York, NY, USA");
         [testExpectation fulfill];
     }];
     
@@ -34,7 +34,7 @@
     [AVCGMapItem searchAddress:@"santos" withCompletionHandler:^(NSArray *arrayItems, NSError *error) {
         XCTAssertNil(error);
         AVCGMapItem *item = (AVCGMapItem *)arrayItems[1][0];
-        XCTAssertEqualObjects(@"Santos, Santos - State of São Paulo, Brazil", item.address, @"Fail retrieving - address (one)");
+        XCTAssertEqualObjects(@"Santos, State of São Paulo, Brazil", item.address, @"Fail retrieving - Santos, State of São Paulo, Brazil");
         [testExpectation fulfill];
     }];
     
@@ -46,7 +46,7 @@
     [AVCGMapItem searchAddress:@"springfield" withCompletionHandler:^(NSArray *arrayItems, NSError *error) {
         XCTAssertNil(error);
         AVCGMapItem *item = (AVCGMapItem *)arrayItems[2][0];
-        XCTAssertEqualObjects(@"Springfield, MA, USA", item.address, @"Fail retrieving - address (list)");
+        XCTAssertEqualObjects(@"Springfield, MO, USA", item.address, @"Fail retrieving - Springfield, MO, USA");
         [testExpectation fulfill];
     }];
     
