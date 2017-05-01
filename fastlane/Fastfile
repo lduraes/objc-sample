@@ -30,8 +30,8 @@ platform :ios do
 	clean: true,
 	code_coverage: true,
 	skip_slack: false,
-	sdk: "iOS Simulator",
-	destination: "name= iPhone 7" 
+	#sdk: "iOS Simulator",
+	#destination: "name= iPhone 7" 
     )
   end
 
