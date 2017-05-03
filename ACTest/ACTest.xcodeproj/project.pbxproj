@@ -370,6 +370,8 @@
 					};
 					3FE361D91C94BF3800923404 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 38U8E27339;
+						ProvisioningStyle = Manual;
 					};
 					3FE361F51C94BF3800923404 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -703,13 +705,14 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 38U8E27339;
 				INFOPLIST_FILE = "$(SRCROOT)/ACTest/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = us.duraes.ACTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "a0ec2c15-d303-4565-b31e-575aee0fa11b";
+				PROVISIONING_PROFILE_SPECIFIER = "dev.*";
 			};
 			name = Debug;
 		};
@@ -721,13 +724,14 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 38U8E27339;
 				INFOPLIST_FILE = "$(SRCROOT)/ACTest/SupportingFiles/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = us.duraes.ACTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "a0ec2c15-d303-4565-b31e-575aee0fa11b";
+				PROVISIONING_PROFILE_SPECIFIER = "dev.*";
 			};
 			name = Release;
 		};
@@ -767,6 +771,7 @@
 				3FE2C8341EB7C7D000169745 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3FE361D51C94BF3800923404 /* Build configuration list for PBXProject "ACTest" */ = {
 			isa = XCConfigurationList;
