@@ -17,7 +17,6 @@ default_platform :ios
 
 platform :ios do
   before_all do
-    # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
     ENV["SLACK_URL"] = "https://mob4u.slack.com"
     
   end
@@ -26,12 +25,12 @@ platform :ios do
   lane :test do
     scan(
     	scheme: "ACTest",
-	workspace: "ACTest/ACTest.xcworkspace",
-	clean: true,
-	code_coverage: true,
-	skip_slack: false,
-	#sdk: "iOS Simulator",
-	#destination: "name= iPhone 7" 
+	    workspace: "ACTest/ACTest.xcworkspace",
+	    clean: true,
+	    code_coverage: true,
+	    skip_slack: false,
+	    #sdk: "iOS Simulator",
+	    #destination: "name= iPhone 7" 
     )
   end
 
@@ -39,9 +38,9 @@ platform :ios do
   lane :report_test_coverage do
     xcov(
     	workspace: "ACTest/ACTest.xcworkspace",
-	scheme: "ACTestTests",
-	output_directory: "xcov_output",
-	slack_url: ENV["SLACK_URL"]
+	    scheme: "ACTestTests",
+	    output_directory: "xcov_output",
+	    slack_url: ENV["SLACK_URL"]
     )
   end
 
